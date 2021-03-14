@@ -54,10 +54,12 @@ def fullStop(FileName):
             dot = False
         else:
             new += fileLines[i]
-
-    print(new)
-    print(fileLines)
+    #print(new)
+    #print(fileLines)
     myFile.close()
+    myFileWrite = open(FileName, "w")
+    myFileWrite.write(new)
+    myFileWrite.close()
 
             
 fullStop("FullStop.txt")
